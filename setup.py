@@ -3,9 +3,22 @@
 import os
 import sys
 
-import djstripe
+#import djstripe
 
-version = djstripe.__version__
+__title__ = "dj-stripe"
+__summary__ = "Django + Stripe Made Easy"
+__uri__ = "https://github.com/pydanny/dj-stripe/"
+
+__version__ = "0.7.0"
+
+__author__ = "Daniel Greenfeld"
+__email__ = "pydanny@gmail.com"
+
+__license__ = "BSD"
+__license__ = "License :: OSI Approved :: BSD License"
+__copyright__ = "Copyright 2015 Daniel Greenfeld"
+
+version = __version__
 
 try:
     from setuptools import setup
@@ -38,18 +51,18 @@ INSTALL_REQUIRES = [
 setup(
     name='dj-stripe',
     version=version,
-    description=djstripe.__summary__,
+    description=__summary__,
     long_description=readme + '\n\n' + history,
-    author=djstripe.__author__,
-    author_email=djstripe.__email__,
-    url=djstripe.__uri__,
+    author=__author__,
+    author_email=__email__,
+    url=__uri__,
     packages=[
         'djstripe',
     ],
     package_dir={'djstripe': 'djstripe'},
     include_package_data=True,
     install_requires=INSTALL_REQUIRES,
-    license=djstripe.__license__,
+    license=__license__,
     zip_safe=False,
     keywords='stripe django',
     classifiers=[
